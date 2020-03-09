@@ -59,3 +59,17 @@ Such a data structure is called a `syntax tree`.
 ## Evaluator
 
 What can we do with the syntax? Run it! And that is what the evaluator does. You give it a syntax and a scope object that associates names with values, and it will evaluate the expression that the tree represents and return the value that this produces.
+
+The evaluator has code for each of the expression types (we have 3 types in this programming language). A literal value expression produce its value.
+
+For instace, the expression 100 just evaluates to the number 100.
+
+For a binding, we have to check whether it is actually defined in a scope and, if it is, fetch the binding's value.
+
+If the type of evaluator is apply, there are more things involved. In particular, if they are a special form, like `if`, we do not evaluate anything and pass the argument expressions, along with the scope, to the function that handles this form. On the other hand, if it is a normal call, we evaluate the operator, verify that it is a function, and call it with the evaluated arguments.
+
+The `if` construct expects three arguments. `SaradaJS` will evaluate it first, and if the result isn't the value false, `SaradaJS` will evaluate the second. Otherwise, the third gets evaluated. Acutually this `if` form is more similar to JavaScript's ternary `?:` operator than to `if...else`.
+
+`SaradaJS` also differs from JavaScript in how it handles the condition value to `if`. It will not treat things like zero or the empty string as `false`, only the precise value `false`.
+
+`SaradaJS` also has `while` special form, and it is similar to `if`.

@@ -1,0 +1,8 @@
+{
+  "name": "a-programming-language",
+  "version": "0.1.0 ",
+  "description": "just another simple programming language",
+  "main": "server.js",
+  "author": "Chau Dinh <chaudvb95uc@gmail.com>",
+  "license": "MIT"
+}

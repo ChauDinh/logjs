@@ -1,6 +1,6 @@
 # A Programming Language
 
-![Logo](./logo-2@2x.png)
+![Logo](./lg@2x.png)
 
 This repo is my practice while reading the book "Eloquent JavaScript", chapter 12.
 

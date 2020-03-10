@@ -12,3 +12,31 @@ topScope.false = false;
 
 let prog = parse(`if(true, false, true)`);
 console.log(evaluate(prog, topScope));
+
+for (let op of ["+", "-", "*", "/", "==", "<", ">", "==="]) {
+  topScope[op] = Function("a, b", `return a ${op} b`);
+}
+
+topScope.print = value => {
+  console.log(value);
+  return value;
+};
+
+// The run function provides a convenient way to parse a program and run it in a fresh scope.
+function run(program) {
+  return evaluate(parse(program), Object.create(topScope));
+}
+
+run(`
+  do (define (total, 0),
+    define (count, 1),
+    while( < (count, 11),
+      do (define (total, + (total, count)),
+        define (count, + (count, 1))
+      )
+    ),
+    print(total)
+  )
+`);
+
+module.exports = run;

@@ -73,3 +73,19 @@ The `if` construct expects three arguments. `SaradaJS` will evaluate it first, a
 `SaradaJS` also differs from JavaScript in how it handles the condition value to `if`. It will not treat things like zero or the empty string as `false`, only the precise value `false`.
 
 `SaradaJS` also has `while` special form, and it is similar to `if`.
+
+## Function
+
+Functions in Sarada get their own local scope like those in JavaScript. The function produced by the func form creates this local scope and adds the arguments bindings to it. The function, then, evaluates the function body in this scope and returns the result.
+
+Ex:
+
+```
+run (`
+  do (define (plusOne, func(a, + (a, 1))),
+    print (plusOne (10))
+  );
+`)
+
+// => 11
+```

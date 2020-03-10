@@ -93,5 +93,4 @@ specialForms.func = (args, scope) => {
   };
 };
 
-module.exports = specialForms;
 module.exports = evaluate;

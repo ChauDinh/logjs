@@ -1,6 +1,6 @@
 # A Programming Language
 
-![Logo](./lg@2x.png)
+![Logo](./logo.png)
 
 This repo is my practice while reading the book "Eloquent JavaScript", chapter 12.
 
@@ -89,3 +89,9 @@ run (`
 
 // => 11
 ```
+
+## Compilation
+
+During evaluation, it acts directly on the representation of the program produced by the parser.
+
+Compilation is the process of adding another step between the parsing and the running of a program.

@@ -2,8 +2,6 @@
 
 ![Logo](./logo.png)
 
-This repo is my practice while reading the book "Eloquent JavaScript", chapter 12.
-
 ## What we will cover?
 
 - Parsing
@@ -68,11 +66,11 @@ For a binding, we have to check whether it is actually defined in a scope and, i
 
 If the type of evaluator is apply, there are more things involved. In particular, if they are a special form, like `if`, we do not evaluate anything and pass the argument expressions, along with the scope, to the function that handles this form. On the other hand, if it is a normal call, we evaluate the operator, verify that it is a function, and call it with the evaluated arguments.
 
-The `if` construct expects three arguments. `SaradaJS` will evaluate it first, and if the result isn't the value false, `SaradaJS` will evaluate the second. Otherwise, the third gets evaluated. Acutually this `if` form is more similar to JavaScript's ternary `?:` operator than to `if...else`.
+The `if` construct expects three arguments. `Sarada` will evaluate it first, and if the result isn't the value false, `Sarada` will evaluate the second. Otherwise, the third gets evaluated. Acutually this `if` form is more similar to JavaScript's ternary `?:` operator than to `if...else`.
 
-`SaradaJS` also differs from JavaScript in how it handles the condition value to `if`. It will not treat things like zero or the empty string as `false`, only the precise value `false`.
+`Sarada` also differs from JavaScript in how it handles the condition value to `if`. It will not treat things like zero or the empty string as `false`, only the precise value `false`.
 
-`SaradaJS` also has `while` special form, and it is similar to `if`.
+`Sarada` also has `while` special form, and it is similar to `if`.
 
 ## Function
 
